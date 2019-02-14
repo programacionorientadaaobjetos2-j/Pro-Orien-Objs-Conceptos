@@ -9,12 +9,19 @@
 
     get color(){
         return this._color; //Convertir un atributo en solo lectura
-
     }
 
     set color(color){
-        this._color=color; //hacer un atributo en solo escritura
-        
+        this._color=color.toUpperCase(); //hacer un atributo en solo escritura
+    }
+
+    set modelo (modelo){
+        if(modelo<2000){
+            this._modelo=2000;
+        }
+        else{
+            this._modelo=modelo;
+        }
     }
 
     mostrarEstado() {
@@ -38,7 +45,7 @@
         else{
             let distancia=velocidad*tiempo;
             this._kilometraje= this._kilometraje + distancia;
-            this._mostrarEstado;
+            this._mostrarEstado();
         }
     }
 
