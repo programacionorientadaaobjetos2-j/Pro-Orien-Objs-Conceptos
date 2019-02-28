@@ -82,7 +82,7 @@
             <!-- Aliniacion horizontal -->
             <h1>Aliniacion horizontal</h1>
             <div class="row justify-content-sart border">
-                <div class="col-4 border">A</div>
+                <div class="col-4 border" style="background-color: green;">A</div>
                 <div class="col-4 border">B</div>
             </div>
 
@@ -97,7 +97,7 @@
             </div> 
 
             <div class="row justify-content-around border">
-                <div class="col-4 border">A</div>
+                <div class="col-4 border" style="background-color: green;">A</div>
                 <div class="col-4 border">B</div>
             </div>
             <div class="row justify-content-between border">
@@ -130,6 +130,41 @@
                 </div>
             </div>
             
+        <!--Botones-->
+        <h1>Botones</h1>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                    <button type="button" class="btn">Basico</button>
+                <button type="button" class="btn btn-primary btn-lg">primary</button>
+                <button type="button" class="btn btn-secondary btn-md">secondary</button>
+                <button type="button" class="btn btn-warning btn-sm">warning</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-2 text-center">
+                    <button type="button" class="btn btn-success">Normal</button>
+                </div>
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-4 text-center">
+                    <button type="button" class="btn btn-success btn-block">Block</button>
+                </div>
+        </div>
+        <!-- Formularios-->
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <form action="">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Roberto Carrasco">
+                    </div>
+                    <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="rcarrasco0@ucol.mx">
+                        </div>
+                </form>
+            </div>
+        </div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
