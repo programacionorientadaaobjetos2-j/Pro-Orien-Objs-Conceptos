@@ -1,27 +1,19 @@
-import Empleado from "./Empleado.js"
+import Employee from "./Employee.js"
+import Agenda from "./Agenda.js"
 
-let btn = document.querySelector('#btnAdd')
-let inputNombre = document.querySelector('#name')
-let inputCorreo = document.querySelector('#email')
-let inputNacimiento = document.querySelector('#birthday')
-btn.addEventListener('click', agregar)
+class Main{
+    constructor(){
+        let agenda = new Agenda(document.querySelector('#agenda'))
+        document.querySelector('#btnAdd').addEventListener('click',()=>{
+            let name =document.querySelector('#name').value
+            let email = document.querySelector('#email').value
+            let birthday = new Date(document.querySelector('#birthday').value)
 
-let empleados
-function agregar(){
-    let nombre = inputNombre.value
-    let email = inputCorreo.value
-    let nacimiento = inputNacimiento.value
-    
-    empleados = new Empleado(nombre,email,nacimiento)
-    console.log(empleados)
-    Array();
+            let employee = new Employee(name,email,birthday)
+            agenda.addEmployee(employee)
+        })
+    }
+
 }
 
-var baseDatos = []
-function Array(){
-    baseDatos.push(empleados)
-    console.log(empleados.getAge())
-    document.querySelector('#agenda').innerHTML += 
-    '<tbody><td>'+ empleados._name +'</td><td>'+ empleados._email +
-    '</td><td>'+ empleados._birthday + '</td><td>'+empleados.getAge()+'</td></tbody>'
-}
+let m =new Main()
