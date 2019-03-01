@@ -20,6 +20,8 @@ function agregar(){
 var baseDatos = []
 function Array(){
     baseDatos.push(empleados)
-    empleados.getAge(new Date)
-    document.querySelector('#agenda').innerHTML += '<tbody><td>'+ empleados._name +'</td><td>'+ empleados._email +'</td><td>'+ empleados._birthday +'</td></tbody>'
+    console.log(empleados.getAge())
+    document.querySelector('#agenda').innerHTML += 
+    '<tbody><td>'+ empleados._name +'</td><td>'+ empleados._email +
+    '</td><td>'+ empleados._birthday + '</td><td>'+empleados.getAge()+'</td></tbody>'
 }
