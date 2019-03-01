@@ -4,7 +4,10 @@ export default class Empleado{
         this._email=email;
         this._birthday=birthday;
     }
-    getAge(){
-        
+    
+    getAge(fechaActual){
+    let edad = fechaActual - this._birthday
+    let age = Math.trunc(edad/(1000*60*60*24))
+    console.log(`El empleado tiene ${age}`)        
     }
 }
