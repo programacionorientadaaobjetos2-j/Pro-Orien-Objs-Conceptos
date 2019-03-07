@@ -15,11 +15,11 @@ export default class Employee{
         return this._birthday
     }
     getBirthdayAsString(){
-        let date = (this._birthday.getDate()+1)+'-'+(this._birthday.getMonth()+1)+'-'+this._birthday.getFullYear()  
+        let date = (this._birthday.getDate())+'-'+(this._birthday.getMonth())+'-'+this._birthday.getFullYear()  
         return date
     }
     getAge(){
-        let oneDay = 24*60*60*100
+        let oneDay = 24*60*60*1000
         let oneYear = oneDay * 365
         let differenceMs = new Date()-this._birthday
         let age = Math.trunc(differenceMs/oneYear)
