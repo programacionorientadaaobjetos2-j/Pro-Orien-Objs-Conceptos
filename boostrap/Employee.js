@@ -3,6 +3,7 @@ export default class Employee{
         this._name=nombre;
         this._email=email;
         this._birthday=birthday;
+        this._months = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dec"]
     }
 
     get name(){
@@ -15,7 +16,7 @@ export default class Employee{
         return this._birthday
     }
     getBirthdayAsString(){
-        let date = (this._birthday.getDate())+'-'+(this._birthday.getMonth())+'-'+this._birthday.getFullYear()  
+        let date = (this._birthday.getDate())+'-'+(this._months[this._birthday.getMonth()])+'-'+this._birthday.getFullYear()  
         return date
     }
     getAge(){

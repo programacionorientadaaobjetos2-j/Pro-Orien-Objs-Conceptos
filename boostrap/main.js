@@ -14,7 +14,7 @@ class Main{
             
             let sBirthday = document.querySelector('#birthday').value
             sBirthday = sBirthday.split("-")
-            let birthday = new Date(sBirthday[0],sBirthday[1],sBirthday[2])
+            let birthday = new Date(sBirthday[0],sBirthday[1]-1,sBirthday[2])
             
             let employee = new Employee(name,email,birthday)
             agenda.addEmployee(employee)
